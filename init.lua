@@ -121,7 +121,7 @@ end)
 -- Battery watcher
 function batteryChangedCallback()
   if hs.battery.isCharged() then
-    hs.notify.new({title="Your battery is charged", informativeText="Please disconnect the charger."}):send():release()
+    hs.notify.new({title="Your battery is charged", informativeText="Please disconnect the charger.", soundName="Hero"}):send():release()
   end
 end
 

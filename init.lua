@@ -2,6 +2,14 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
   hs.caffeinate.shutdownSystem()
 end)
 
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "G", function()
+  hs.application.launchOrFocus("Google Chrome")
+end)
+
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "V", function()
+  hs.application.launchOrFocus("MacVim")
+end)
+
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Y", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()

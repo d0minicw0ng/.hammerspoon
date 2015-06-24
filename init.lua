@@ -1,7 +1,9 @@
+-- System events
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
   hs.caffeinate.shutdownSystem()
 end)
 
+-- Launching applications
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "G", function()
   hs.application.launchOrFocus("Google Chrome")
 end)
@@ -10,74 +12,7 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "V", function()
   hs.application.launchOrFocus("MacVim")
 end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Y", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x - 10
-  f.y = f.y - 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "K", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.y = f.y - 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "U", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x + 10
-  f.y = f.y - 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "H", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x - 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "L", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x + 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "B", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x - 10
-  f.y = f.y + 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "J", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.y = f.y + 10
-  win:setFrame(f)
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "N", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-
-  f.x = f.x + 10
-  f.y = f.y + 10
-  win:setFrame(f)
-end)
-
+-- Resizing windows
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Left", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
@@ -143,6 +78,7 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Space", function()
   win:setFrame(f)
 end)
 
+-- Pathwatcher
 function reloadConfig(files)
   doReload = false
   for _, file in pairs(files) do

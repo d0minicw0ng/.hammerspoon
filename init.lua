@@ -93,3 +93,27 @@ end
 
 hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
 hs.alert.show("Hello! Mr. Dominic Wong")
+
+-- Wifi watcher
+local homeSSID = "Utopia"
+local lastSSID = hs.wifi.currentNetwork()
+
+function ssidChangedCallback()
+  newSSID = hs.wifi.currentNetwork()
+
+  if newSSID == homeSSID and lastSSID ~= homeSSID then
+    hs.audiodevice.defaultOutputDevice():setVolume(50)
+  elseif newSSID ~= homeSSID then
+    hs.audiodevice.defaultOutputDevice():setVolume(0)
+  end
+
+  lastSSID = newSSID
+end
+
+wifiWatcher = hs.wifi.watcher.new(ssidChangedCallback)
+wifiWatcher:start()
+
+-- Force paste
+hs.hotkey.bind({"cmd", "alt"}, "V", function()
+  hs.eventtap.keyStrokes(hs.pasteboard.getContents())
+end)

@@ -4,6 +4,10 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
 end)
 
 -- Launching applications
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "T", function()
+  hs.application.launchOrFocus("iTerm2")
+end)
+
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "G", function()
   hs.application.launchOrFocus("Google Chrome")
 end)

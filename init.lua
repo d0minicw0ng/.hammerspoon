@@ -117,3 +117,13 @@ wifiWatcher:start()
 hs.hotkey.bind({"cmd", "alt"}, "V", function()
   hs.eventtap.keyStrokes(hs.pasteboard.getContents())
 end)
+
+-- Battery watcher
+function batteryChangedCallback()
+  if hs.battery.isCharged() then
+    hs.notify.new({title="Your battery is charged", informativeText="Please disconnect the charger."}):send():release()
+  end
+end
+
+batteryWatcher = hs.battery.watcher.new(batteryChangedCallback)
+batteryWatcher:start()

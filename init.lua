@@ -1,3 +1,7 @@
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
+  hs.caffeinate.shutdownSystem()
+end)
+
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Y", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()

@@ -3,6 +3,14 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
   hs.caffeinate.shutdownSystem()
 end)
 
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "W", function()
+  if hs.wifi.currentNetwork() == nil then
+    os.execute("networksetup -setairportpower en0 on")
+  else
+    os.execute("networksetup -setairportpower en0 off")
+  end
+end)
+
 -- Launching applications
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "T", function()
   hs.application.launchOrFocus("iTerm2")

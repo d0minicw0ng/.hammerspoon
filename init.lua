@@ -13,7 +13,7 @@ end)
 
 -- Launching applications
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "T", function()
-  hs.application.launchOrFocus("iTerm2")
+  hs.application.launchOrFocus("iTerm")
 end)
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "G", function()

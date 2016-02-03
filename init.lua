@@ -1,5 +1,5 @@
 -- System events
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "K", function()
   hs.caffeinate.shutdownSystem()
 end)
 
@@ -26,6 +26,10 @@ end)
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "V", function()
   hs.application.launchOrFocus("MacVim")
+end)
+
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
+  hs.application.launchOrFocus("Slack")
 end)
 
 -- Resizing windows

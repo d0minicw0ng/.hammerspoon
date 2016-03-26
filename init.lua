@@ -115,7 +115,7 @@ hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
 hs.alert.show("Hello! Mr. Dominic Wong")
 
 -- Wifi watcher
-local homeSSID = "Utopia"
+local homeSSID = "NETGEAR76"
 local lastSSID = hs.wifi.currentNetwork()
 
 function ssidChangedCallback()

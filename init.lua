@@ -29,7 +29,7 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "V", function()
 end)
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
-  hs.application.launchOrFocus("Slack")
+  hs.application.launchOrFocus("Franz")
 end)
 
 -- Resizing windows

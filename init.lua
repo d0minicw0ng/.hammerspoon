@@ -20,16 +20,16 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "G", function()
   hs.application.launchOrFocus("Google Chrome")
 end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "F", function()
-  hs.application.launchOrFocus("Firefox")
-end)
-
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "V", function()
   hs.application.launchOrFocus("MacVim")
 end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "F", function()
   hs.application.launchOrFocus("Franz")
+end)
+
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
+  hs.application.launchOrFocus("SelfControl")
 end)
 
 -- Resizing windows
@@ -112,7 +112,7 @@ function reloadConfig(files)
 end
 
 hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
-hs.alert.show("Hello! Mr. Dominic Wong")
+hs.alert.show("Hello Sir Dominic!")
 
 -- Wifi watcher
 local homeSSID = "NETGEAR76"

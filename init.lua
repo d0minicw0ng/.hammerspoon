@@ -32,6 +32,10 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
   hs.application.launchOrFocus("SelfControl")
 end)
 
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "P", function()
+  hs.application.launchOrFocus("Postman")
+end)
+
 -- Resizing windows
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Left", function()
   local win = hs.window.focusedWindow()

@@ -20,6 +20,10 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "G", function()
   hs.application.launchOrFocus("Google Chrome")
 end)
 
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "B", function()
+  hs.application.launchOrFocus("Brave Browser")
+end)
+
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "V", function()
   hs.application.launchOrFocus("MacVim")
 end)

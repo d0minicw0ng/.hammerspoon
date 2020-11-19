@@ -12,6 +12,10 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "W", function()
 end)
 
 -- Launching applications
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "A", function()
+  hs.application.launchOrFocus("Authy Desktop")
+end)
+
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "T", function()
   hs.application.launchOrFocus("iTerm")
 end)

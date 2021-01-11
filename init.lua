@@ -37,7 +37,7 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "F", function()
 end)
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "S", function()
-  hs.application.launchOrFocus("SelfControl")
+  hs.application.launchOrFocus("Signal")
 end)
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "P", function()

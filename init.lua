@@ -48,6 +48,10 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Q", function()
   hs.application.launchOrFocus("PSequel")
 end)
 
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "N", function()
+  hs.application.launchOrFocus("Notion")
+end)
+
 -- Resizing windows
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Left", function()
   local win = hs.window.focusedWindow()
